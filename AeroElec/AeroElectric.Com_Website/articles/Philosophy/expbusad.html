@@ -1,0 +1,166 @@
+<HTML><HEAD>
+<TITLE>EXP Bus - Nuckolls review of the design and advertisment</TITLE>
+</HEAD><BODY BGCOLOR="#FFFB00">
+
+
+<center><h2>EXP Bus - Nuckolls review of the design and advertisment</h2></center>
+
+November 1999
+<pre>
+Some months ago, a reader sent me a copy of the advertisement
+for the EXP-Bus.  I read the article and added my own critical
+design review. See a thread elsewere on this site that sumarizes
+some discussions on the topic including a response from the
+gentleman who designed and sells EXP-Bus . . . .
+ 
+ >ARE YOU WIRING UP A HOMEBUILT AIRCRAFT?
+ >
+ >if so, then you should investigate our new product, the <b>EXP-BUS</b>. 
+ >Thisproduct can save a lot of time and money wiring up a project. . . .
+ 
+      Compared to what?  You still have to cut holes for a PREDETERMINED
+      number of switches arranged in PREDERTERMINED order. Little chance
+      for customization. The assembly suggested DOES eliminate the need
+      for fabricating a breaker panel.  So that time and space is saved.
+      However, fuseblocks and toggle/rocker switches can be used to
+      fabricate an easily customized power distribution and control 
+      system for about $10 per switched circuit (landing lights,
+      nav lights, etc) and $0.50 per unswitched circuit (turn coordinator,
+      nav/com, etc.).
+ 
+ >HOW DO "SOLID STATE FUSES" WORK?
+ 
+ >The purpose of the limiter is identical to that of the breaker, to shut
+ >off whenever too much current is being drawn from a particular circuit. 
+ >Technically, the devices used are very non-linear thermistors with a
+ >positive temperature coefficient (PTC).  When excess current is drawn, the
+ >PTC device heats up and becomes a poor conductor of electricity.  This
+ >shuts down the offending circuit.  These components are UL recognized, and
+ >manufactured by a major US component manufacturer.  
+ >
+     Generally true . . .
+ 
+ >AN EXAMPLE
+ 
+ 
+ >Suppose that a wire leading to a nav light is chafing against a grounded
+ >metal part in a wing, such as a rib.  If the light is on, and the
+ >insulation abrades away, the wire will intermittently or permanently short
+ >to ground.  With a fuse, the overcurrent will blow the element in the
+ >fuse, before the wire can get hot and start a fire (although the spark
+ >could ignite fuel vapors before the fuse blows). 
+ 
+       True of any form of circuit protection whether fuse, breaker OR
+       PTC resistor.
+ 
+ >With a breaker, the
+ >bimetallic element in the breaker heats up (more slowly than the fuse) and
+ >trips the breaker.  With the solid state device, the PTC device gets hot,
+ >increasing it's resistance, and shutting down current flow to the nav
+ >lights.  Actually, about 1/30th of an amp continues to flow, which is not
+ >enough current to heat up any wiring. The voltage drop across the PTC
+ >device keeps the device hot (about 100 degrees C), and the device stays
+ >"tripped".   The load presented to the circuit by the nav lights will keep
+ >the device tripped even if the short is intermittant.
+ >
+
+       There are some operational considerations with self-reseting devices.
+       An intermittant fault gets you a popped breaker or fuse; an 
+       immediate indication of system difficulties.  
+
+ >The devices used are made to perform this function, and can do this over
+ >and over, thousands of times without damage.  To reset the device, power
+ >is removed from the circuit for about 10 seconds (by switching off the nav
+ >light) , the device cools and switches back on, and the circuit is
+ >restored.  If the short still exists, the device will immediatly trip
+ >again.
+
+       An important issue here is, "how often does a breaker or fuse
+       get cycled in an airplane?" The answer is, "almost never." This
+       being the case, automatic resetability is a non-convenience.
+ >
+ >We demonstrated this scenario literally hundreds of times at Oshkosh this
+ >year.  These devices are used in automibiles and also in military
+ >electronics manufactured by Control Vision.  No smoke and no mirrors used
+ >here.  Using these devices, we have produced a PC board with switches
+ >mounted on it that replaces up to 16 fuses and circuit breakers in a small
+ >aircraft.  Because these devices are quite inexpensive, we are able to
+ >offer the entire assembly for $249,. slightly less than the cost of the
+ >individual circuit  breakers it replaces.
+ >
+       There are breakers and then there are breakers. You can buy
+       thermal breakers for $3 to $30 apiece depending on size
+       and relative "quality."  $3 breakers will protect 16 circuit
+       for about $50. Of the 16 circuits, perhaps 5 will have switches
+       for another $35 bringing the total hardware costs to $85.
+
+       Switch panels have to be fabricated no matter what. Breaker
+       panels can be replaced with fuseblocks which pushes the labor
+       close to zero.  If one assumes that $20 Klixon breakers are
+       the standard of comparison, then yes $249 IS less than $320.
+ 
+ >This is not a scam, we are offering this product with a 90 day money back
+ >guarantee, and a 1 year warranty.  A builder can save time,
+
+         I cannot see how . . . 
+ 
+  > money, 
+
+         Depends . . . if the customer intends to use EXP-Bus to replace
+         traditional breaker panel, I agree.  However compared to using
+         fuseblocks, the EXP-Bus is more expensive . . .
+
+  >panel space,
+ 
+          Again, compared with clasic breaker panel/switch panel 
+          installations, yes. . . . but not compared with fuse-blocks
+          and contemporary switch installations.
+ 
+  >troubleshooting, 
+ 
+         Vague . . . what troubles?  Popped breakers and fuses on a
+         finished airplane are extremely rare and to my way of thinking,
+         the positive indication afforded by fuses and breakers is preferable
+         to the masking and intermittant condition with self re-setting 
+         current limiters. . . .
+  
+  >and weight.
+ 
+         Again, compared to what?  Fuse blocks and switches are the lightest,
+         lowest cost, and fastest installation you're going to find. Further,
+         it's easiest to maintain in terms of individual switch replacment
+         and if necessary one can replace the entire bus bar and protection
+         system in 10 minutes with a screwdriver and needle nose pliers for
+         a cost of about $32. Try that on your panel mounted breaker patch!
+ 
+         There are several products of this genre on the market. They
+         all feature higher cost, longer installation times, greater
+         weight and higher parts counts than the fuseblock and switch
+         configuration of power distribution and control. Both types I
+         saw at OSH were not well thought out with respect to vibration
+         resistance. Both dropped wire segments directly into soldered
+         pads of etched circuit boards with no mechanical support. Parts
+         counts on both products was very high. One version soldered
+         one edge of an etched circuit board to a row of toggle switch
+         connections . . . a real nightmare for replacement of a single
+         switch . . . With all due respect to these folk and their 
+         entrepreneurship, I cannot recommend these products as cost 
+         or performance effective in amateur-built airplanes.
+ 
+       Regards,
+
+      Bob . . .
+      AeroElectric Connection
+
+                      ////
+                     (o o)
+      ===========o00o=(_)=o00o=========
+      |                               |
+      | Go ahead, make my day . . . . |
+      |   Show me where I'm wrong.    |
+      =================================
+        http:\\www.aeroelectric.com
+
+      Comments and alternative views welcome!
+<HR>
+</body></html>

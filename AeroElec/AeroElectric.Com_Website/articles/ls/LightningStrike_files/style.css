@@ -1,0 +1,24 @@
+body		{ background-color: lightblue;background-image:url('images/Image2.gif') }
+p              	{ font-family: Times New Roman, Times New Roman; font-size: 12pt }
+li             	{ font-family: Times New Roman, Times New Roman; font-size: 10pt }
+td             	{ font-family: Times New Roman, Times New Roman; font-size: 10pt }
+h1             	{ font-family: Times New Roman, Times New Roman; font-size: 36pt; font-weight:normal }
+h2             	{ font-family: Times New Roman, Times New Roman; font-size: 16pt; font-weight:bold }
+h3             	{ font-family: Times New Roman, Times New Roman; font-size: 14pt; font-weight:bold }
+h4             	{ font-family: Times New Roman, Times New Roman; font-size: 12pt; font-weight:bold }
+h5             	{ font-family: Times New Roman, Times New Roman; font-size: 10pt; font-weight:bold }
+h6             	{ font-family: Times New Roman, Times New Roman; font-size: 10pt; font-weight:italic }
+	
+a              	{ color:blue; text-decoration: none}
+a:visited      	{ color:navy; text-decoration: none}
+a:link         	{ color:blue; text-decoration: none}
+a:active       	{ color:navy; text-decoration: none}
+a:hover        	{ color:red; text-decoration: underline}
+	
+.navb_main     	{ font-family: arial, helvetica; font-size: 10pt; font-weight:bold; color:navy }
+.navb_sub1     	{ font-family: arial, helvetica; font-size: 8pt; font-weight:normal; color:silver; margin-left:10 }
+.navh_main     	{ font-family: arial, helvetica; font-size: 10pt; font-weight:bold; color:navy }
+.navh_sub1     	{ font-family: arial, helvetica; font-size: 8pt; font-weight:normal; color:silver }
+.navh_history  	{ font-family: arial, helvetica; font-size: 10pt; font-weight:normal; color:black }
+	
+.footer        	{ font-family: arial, helvetica; font-size: 7pt; text-align:center }

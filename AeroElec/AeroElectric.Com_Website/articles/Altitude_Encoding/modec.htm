@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 4.0::19970714::extensions to HTML 4.0//EN" "hmpro4.dtd"><html><head><title>Mode A and Mode C Codes</title></head>
+
+
+  
+  <body text="#000000" bgcolor="#ffffff" link="#0000ff" vlink="#551a8b" alink="#ff0000">
+    <center>
+    <h1> <b>MODE A AND MODE C</b></h1></center>
+    <center>
+    <h2> <b>THE STRAIGHT SCOOP ON HOW IT WORKS</b></h2></center>
+    <center>
+    <h2> <b><font size="+0">by</font></b></h2></center>
+    <center>
+    <h2> <b><font size="+0">Darryl Phillips</font></b></h2></center>
+    
+    <p>What happens when you dial "1200" into your transponder? How
+      is aircraft altitude transmitted to the controller? What is Mode A and
+      Mode C anyway? </p>
+    
+    <p>To find answers, perhaps we should begin with a little history. The Air
+      Traffic Control Radar Beacon System (ATCRBS) is an outgrowth of the IFF
+      equipment developed during World War II, at the same time radar itself was
+      coming into use. The problem was differentiating between the good guys and
+      the bad guys, and IFF (Identification, Friend or Foe) was the answer. The
+      equipment on board each allied aircraft received the radar pulses, and
+      transmitted a secret code in reply. There were 64 possible codes, and the
+      idea worked quite well. </p>
+    
+    <p>After the war the concept was adapted for air traffic control.
+      Improvements were made, and the interrogator was separated from the radar
+      itself. It still rotates around on the same dish, looking in the same
+      direction, and is displayed on the same scope, in the same shade of green.
+      (Ever wonder why the FAA never learned the advantages of color? I've
+      wondered that too.) </p>
+    
+    <p>The 64 codes consisted of two digits, called A and B. (These are not
+      Mode A and B, that is something else altogether.) There were two knobs, A
+      and B. Each digit has 8 possibilities, from 0 thru 7. 8 X 8 = 64, so there
+      were 64 possible codes. </p>
+    
+    <p>Figure 1 shows the original 64 code format, and today's 4096 code format
+      under it. Each reply consisted of a framing pulse, some combination of the
+      six possible data pulses, and another framing pulse. It all took place in
+      20.75 microseconds. At the speed of light, a radio signal travels 3.35 NM
+      in that much time. Like ripples in a pond, the signal travels outward from
+      the plane, and when the last of the signal leaves the antenna, the first
+      is 3.35 milles away. </p>
+    <center></center>
+    <center><b><font size="+2">Figure 1</font></b></center>
+    <center><img src="modec_files/figure1.gif" alt="Figure 1" height="350" width="700" align="bottom"></center>
+    
+    <p>The pulse numbers are binary weighted, so it is easy to determine the
+      relationship between pulses and the number they represent. The A digit,
+      for example, looks like this, with 1 representing a pulse, and 0
+      representing no pulse: <br> </p>
+    <center><table width="100%">
+      <tbody><tr valign="top">
+        <td align="center"></td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+        <td align="center">5</td>
+        <td align="center">6</td>
+        <td align="center">7</td>
+      </tr>
+      <tr valign="top">
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+        <td align="center" height="10"></td>
+      </tr>
+      <tr valign="top">
+        <td align="center">A1</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+      </tr>
+      <tr valign="top">
+        <td align="center">A2</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+      </tr>
+      <tr valign="top">
+        <td align="center">A4</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+      </tr>
+    </tbody></table></center>
+    
+    <p>The same pattern applies to digits (knobs) B, C, and D. </p>
+    
+    <p>Pretty soon 64 squawk codes weren't enough, and a scheme evolved to
+      place a pulse between each of the original pulses. This gave us 8 X 8 X 8
+      X 8 = 4096, the system we have today. The C digit nested into the A digit,
+      likewise the D interdigitated with B. In the process the new X pulse
+      appeared and could have been used to differentiate between Squawk and
+      Altitude replies, but it wasn't. X has never been used for anything. </p>
+    
+    <p>So today we have transponders with four knobs, which represent A, B, C,
+      and D. Each can be set to anything from 0 to 7 (the switches don't have a
+      position 8 or 9.) To squawk 1200, the A knob is set to 1, B is set to 2, C
+      and D are set to 0. </p>
+    
+    <p>If the transponder receives a Mode A interrogation, it transmits the
+      squawk code, as set by the pilot. If it receives a Mode C interrogation,
+      it transmits the altitude code, as supplied by the encoder. It's important
+      to understand that AT NO TIME does the transponder send both. It's one or
+      the other, if the ground station sends a Mode A interrogation, the
+      transponder replies with a string of pulses that are the squawk code only.
+      If a Mode C interrogation, the reply is altitude only. </p>
+    
+    <p>Figure 2 illustrates the interrogation pulses. These pulses are
+      transmitted on 1030 Mhz. All interrogators use the same frequency. The
+      space between P1 and P3 defines the type of request, Mode A (the feds call
+      this 3/A), or Mode C. If the P1-P3 timing is 8 microseconds, leading edge
+      to leading edge, a Mode A response is expected, and if 21 microseconds,
+      the request is for Mode C (altitude) data. P2 is used for sidelobe
+      suppression, so that the transponder will only respond to the principal
+      forward lobe of the rotating antenna, even when flying in strong signal
+      near the interrogating site. Long range radar installations, the kind
+      Center uses , typically alternate A, C, A, C, on a one to one ratio. ASR
+      usually looks like this: A, A, C, A, A, C, with two squawk requests for
+      each altitude interrogation. </p>
+    <center></center>
+    <center><b><font size="+2">Figure 2</font></b><img src="modec_files/figure2.gif" alt="Figure 2" height="199" width="675" align="bottom"></center>
+    
+    <p>The output of the transponder is on the frequency of 1090 Mhz. Pulse
+      position and timing specs are shown in Figure 3. The SPI pulse is present
+      only when the Ident button has been pressed, and lasts about 10 seconds.
+    </p>
+    <center></center>
+    <center><b><font size="+2">Figure 3</font></b></center>
+    <center><img src="modec_files/figure3.gif" alt="Figure 3" height="269" width="657" align="bottom"></center>
+    
+    <p>There is no difference between a Mode A and Mode C reply. If a Mode A
+      interrogation is issued, a Mode A reply is expected, and the pulses will
+      be decoded that way. Likewise, if a Mode C request is made, the data
+      received from the aircraft will be calculated as altitude. This works well
+      with only one ground station, but with several stations interrogating the
+      same aircraft, mistakes can and do occur. </p>
+    
+    <p>The Mode C data is pressure altitude, i.e., set to 29.92". This is
+      equally true whether you are using a blind encoder, or an encoding
+      altimeter. (If it weren't so, the controller would have to know what type
+      of encoder you are using.) Usually there will be a substantial difference
+      between pressure altitude and the reading shown on the altimeter. Often
+      hundreds of feet. (Hint: Turn your barometric adjust knob on your
+      altimeter from one end to the other, and see how much difference it makes
+      in the altitude reading. On most altimeters, it's about 2700 ft.) </p>
+    
+    <p>The ground equipment automatically adds the necessary barometric
+      correction, according to the local pressure. The controller sees the same
+      reading on his scope that the pilot sees on the altimeter, if both are
+      using the same barometric setting. It is possible, indeed likely, that
+      another ATC facility is indicating this aircraft at a different altitude,
+      since the barometric pressure varies from one location to another. </p>
+    
+    <p>Each altitude code has an equivalent squawk code. The
+      <a href="modecascii.txt" target="">list of altitude codes</a> shows how
+      that same data would decode as a squawk rather than altitude. But each
+      squawk code does not necessarily have an equivalent altitude. There are
+      4096 squawk codes but only 1280 altitude codes, one for each 100 foot
+      increment from -1200 to 126,700 ft. </p>
+    
+    <p>Why do the altitudes go all the way down to a negative 1200 ft? It's the
+      barometric thing again. If you are physically located at sea level on a
+      day with pressure above 29.92, your encoder will be putting out an
+      altitude (pressure altitude) below zero. To accommodate the possible high
+      pressures, the range goes down to -1200. </p>
+    
+    <p>Altitude encoders switch from one code to the next nominally at the 50
+      foot point. Thus the code should indicate 1000 ft. at any height from 950
+      to 1050 ft., pressure altitude. But don't depend on it, the specifications
+      are somewhat loose. </p>
+    
+    <p>But in the real world, when does the encoder switch? This is a question
+      of practical importance to the pilot, because it can make the difference
+      between a violation or not. The answer isn't simple. Encoders switch when
+      they feel like it. If the encoder was perfect (none are) and temperature
+      and humidity and gravity and barometric pressure were standard (they never
+      are) and there were no vibration or static system error (and if you
+      believe in Santa Clause and the Easter Bunny), then the encoder will
+      switch as stated above, at the 50 ft point. But consider just one
+      variable, barometric pressure. If it was 29.93, just one one-hundredth of
+      an inch above standard, the encoder would switch at the 40 ft point (1040,
+      1140, 1240 etc). At 29.96, the encoder would switch near the 10 ft point,
+      and at 29.97 reported altitude would switch at the assigned altitude. </p>
+    
+    <p>So you can see that if you are assigned 6000 ft, for example, your
+      encoder would be jumping up and down between 5900 and 6000, while you are
+      cruising steady at your assigned altitude. This is one reason why it's
+      important to have a readout, so you can see what your equipment is
+      reporting to ATC. </p>
+    
+    <p>The altitude coding pattern was developed when mechanical encoders were
+      the only way to digitize the data. It is somewhat bass-ackwards, with D2
+      as the most significant bit, followed with D4, A1, A2, A4, B1, B2, B4, in
+      a gray code that changes every 500 feet. The least significant digit is C,
+      with C1, C2, C4 following a recyclic code different from the gray pattern.
+      Note that only one bit changes for each increment of altitude. Bit D1 is
+      never used and always remains a "0". There are 3 illegal
+      combinations of C bits, 000, 101, and 111. </p>
+    
+    <p>One further note on the Mode C codes. Transponder data inputs are
+      inverted logic. A logic "1" is ground, while a "0" is
+      allowed to float to some positive voltage, depending on the particular
+      transponder model. To indicate an altitude of 3500 ft., for instance a
+      ground is placed on A4, B1, B4 and C2. </p>
+    <center></center>
+    <center><b><font size="+2">Figure 4</font></b></center>
+    <center><img src="modec_files/figure4.gif" alt="Figure 4" height="304" width="385"></center>
+    
+    <p><br></p>
+    <center><b><a href="modecascii.txt" target=""><font size="+2">Table of
+      Mode A and Mode C Encoder Data</font></a></b></center>
+    

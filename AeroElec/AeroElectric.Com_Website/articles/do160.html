@@ -1,0 +1,119 @@
+<HTML><HEAD>
+<TITLE>AeroElectric Connection - DO-160 In a NutshellCladBoarding</TITLE>
+</HEAD><BODY text="000000" background="graph.gif">
+<P>
+
+<table border="0" width=80%><tr><td><p>
+<IMG WIDTH=300 HEIGHT=120 ALIGN=center HSPACE=8 SRC="logo.jpg">
+</td>
+<td>
+<CENTER><H1>What's all This DO-160 Stuff Anyhow?</H1></Center>
+</td></tr></table>
+<hr>
+<font size="4">
+
+I often refer to "DO-160" as a basis for selecting components or demonstrating 
+performance in aircraft electrical systems. DO-160 is a document crafted by 
+the Radio Technical Commission on Aeronautics based in Washington, DC. This 
+is not a government agency, rather a joint effort of all of aviation's 
+stakeholders who have an interest in crafting common sense approaches to 
+design and qualification of electrical products for aircraft. It's a "UL 
+Laboratories" kind of activity but for airplanes instead of TV sets and 
+toasters. RTCA has crafted dozens of documents on a variety of topics. 
+These are written by committees of folk who are generally selected from the 
+design, manufacturing, users and regulatory communities for the task under 
+consideration - a kind of TQM/6-sigma approach to a task that has been worked 
+for decades . . . long before buzz words like TQM and 6-sigma appeared on 
+the scene . . .<a href=http://www.rtca.org/> Click here for more information 
+on this organization</a><p>
+
+<Font size="5">What it is:</font><p> First, DO-160 is not a REQUIREMENT . . . it's 
+simply a listing of various tests recommended to show any particular piece of 
+equipment is (1) not subject to damage or degradation of performance from the 
+aircraft environment (2) not vulnerable to common noises and (3) does not 
+itself generate noises unacceptable to other system in the airplane. 
+DO-160 was crafted by a large committee of representatives from industry, 
+aviation user groups, and of course government. The document is a middle of 
+the road recommendation for tests that do a pretty good job of balancing what 
+is NEEDED against what is POSSIBLE and PRACTICAL. . .  a much better document 
+than you will get from any agency of government.<p>
+
+When a manufacturer tests to DO-160, they may not (and in fact probably won't) 
+do ALL of the tests prescribed. There is a coding scheme by which the product can be
+labeled as tested to DO-160, what tests, and to what levels of stress.<p>
+
+<Font size="5">Power Input:</font><p> Try to make your gizmo work as specified 
+over the range of 13.0 to 15.0 volts and function with perhaps degraded but 
+still useful performance down to 10.5 volts (end of battery life). <p>
+
+<Font size="5">Bus Noise: </font><p> Expect noise on the bus ranging from 10 
+to 100 Hz ramping upward zero volts pk-pk to 1.5 volts pk-pk. Then from 100 Hz 
+to 1000 Hz, at 1.5 volts pk-pk constant. Finaly 1000Hz to 10,000 Hz with the 
+amplitude ramping downward from 1.5 volts pk-pk to zero at 10KHz. A sine wave 
+"noise" is satisfactory for testing.<p>
+
+
+<Font size="5">Power Interruptions:</font><p> Test for all manner of interruption
+and brownout. Your gizmo should not be damaged by any downward excursions of 
+power supply for any duration and levels down to and including zero volts. The 
+gizmo can fail to function below 10.5 volts but should come back to normal 
+operation without pilot intervention when the bus returns to normal.<p>
+
+<Font size="5">Surges:</font><p> Can you take 20 volts for 1 second with no
+damage to your product? Can you take 40 volts for 100 milliseconds? For small 
+electro-whizzies a simple shunt regulated zener or active device (FET or 
+Transistor) supply can be configured to take these hits. For larger current 
+draws, you might have to add an active pass transistor, or other power supply 
+designed to handle at least 40 volts.<p>
+
+My first full blown DO-160 qual was for the first multi-speed pitch trim systems 
+to go on a GA bizjet. First for the new model 55 Learjet and ultimately retrofitted
+to the Learjet fleet. In a 28 volt system I had to stand off 80 volts for 100 
+MILLISECONDS. With a little judicious selection of parts, I demonstrated this 
+portion of the test by cranking up the power supply from 28v nominal to 80 volts while the trim system was
+running . . . the motor speed didn't change a bit. I turned to the FAA inspector who came over to witness the test and asked, "okay, is that long enough?" The supply was 80 volts for several seconds and well over 28 volts for 10 SECONDS during the demonstration. I got no arguments about the 80 volt surge test!<p>
+
+<Font size="5">300V Spike:</font><p> There's a test you can conduct that feeds a short duration spike of up to 300 volts into the 14V input of your gizmo . . . it's easy to pass this test with a 10uF capacitor (rated for 40v surge of course) right across the input.<p>
+
+
+<Font size="5">Temperature Altitude:</font><p> There are LOTS of categories but cabin mounted gizmos for our airplanes would be rated for up to 15,000 feet and operating
+temperatures of -40 to +55 degrees C. Except where there are issues surrounding forced air cooling, I've never had a concern about altitude effects.<p>
+
+Years ago, there were concerns for devices that used very high voltages for operation. Vacuum tube avionics and in particular, high powered transmitters. As ambient air pressure goes down, the ionization potential of surrounding gasses goes down too. At high altitudes, commutators of motor driven high voltage generators (called dynamotors) could be surrounded by contiguous rings of electrical fire. The power transfer components in the output of a transmitter had to be rated for perhaps 10,000 volts at sea level to operate properly at 50,000 feet.  High power transmitters on the B-52 were housed in sealed cans about the size of a 35-gallon drum and pressurized. Nowadays, operating voltages of modern avionics are seldom high enough to cause concern . . . especially at any altitude you and I are going to fly at!<p>
+
+The biggest stumbling block for temperature altitude effects is adequate cooling for high temp ops and those are short lived . .  (sun-soak on ramp in Phoenix . . . cools rapidly once airborne). An occasional radio stack may need forced air cooling due to the very compact nature of modern electronics . . . here again, most amateur built aircraft will be "fully stacked" with two or three radios . . . cooling issues will be few and far between.<p>
+
+<Font size="5">Vibration:</font><p> There are lots of categories here too . . . but unless you're going to mount the gizmo directly on the engine or landing gear, very ordinary fabrication techniques will suffice. In this day of surface mount components, it's REALLY easy to build for robustness.<p>
+
+I'm doing a solid state power distribution assembly for a new target at RAC that launches at 30 g's linear acceleration and subjects me to 10-20 g's of acoustic noise vibration in flight.But because I'm now all solid state and surface mounted, it's
+going the be about the easiest qualification I've ever done.<p>
+
+If you have any components that stand up from an etched circuit board on little solid wire leads, it's a good idea to tack the critters to the board with adhesive (Sho-Goo, Leech F-26 liquid nails, electronic grade RTV are all good possibilities.
+NO garden variety epoxies . . .)<p>
+
+<font size="5">Gunks, goos, grit, bad gas and death by athlete's foot:</font><p> Consider all forms of wet. Water, hydraulic fluid, fuel, oil. Are you gonna keep it out or always mount it where it doesn't matter? How about sand/dust? If you're under the cowl and/or have any moving parts, this should be considered. There's also a test for fungus. This is routinely bought off with a statement in the qualification document that there are, "no materials that are nutrients to fungus used in the fabrication of this device. "How about ozone . . . lots of it under the cowl that will eat up may forms of plastic finishes and insulations.<p>
+
+By-and-large, if your gizmo is mounted inside, protected from external environment and not under the cowl, all of the concerns for effects of the messy/ugly crowd of antagonists go away.<p>
+
+<font size="5">Radio noise:</font><p> You can spend big bux having the full range of frequencies tested in a lab but you can do a quick looksee with a handheld vhf comm and gps receiver. Do any of these critters complain or seem to hear noise when operated in close proximity to your product?<p>
+
+<font size="5">Radio Susceptibility:</font><p> Key up the handheld transmitter while holding it's antenna close to your gizmo and its interconnecting wires. Does this upset its normal operation?<p>
+
+<font size="5">Electo-Static Discharge:</font><p> Can you hold your gizmo in hand and shuffle across the carpet and safely draw a body-static spark to any pin in your input/output connector?This isn't hard to design for and I generally don't bother to test for it any more . . if you have potentially vulnerable pins, let's talk about it.<p>
+
+<font size="5">Lightning: </font><p>This is a BIG thing with the FAA nowaday which I choose to ignore for amateur built aircraft projects. It's not terribly difficult to design for lighting protection but it drives up costs and parts count. Further, I figure if a pilot has gotten himself into a high lightning (or ice) risk, whether or not MY gizmo works is the least of his problems.<p>
+
+So here's your two-bit tour of DO-160 as it might apply to your project. If have a project you're working on and you'd care to share a schematic with me, I can scratch some recommendations onto it based upon 40 years of smoke I've smelled in the lab . . . no sense in letting any smoke out of your parts if it's easy to avoid.<p>
+
+While not DO-160 recommendations, my personal suggestions for input/output is to use D-sub connectors for as much of your wiring needs as possible. The solid state power distribution assembly for a new target I'm working on is ALL d-sub connectors in spite of the fact that three outputs are rated at over 20A continuous and one input is rated for 40A continuous. There are ways to make this work that allow you to take advantage of a wide variety of relatively low cost connectors and tools with military qualified
+pins at the critical junctures in the connector. If you need more information on this, drop me a note.<p>
+
+<center>Fly comfortably . . .<p>
+
+'lectric Bob . . . </center></font>
+ 
+<hr>
+</FORM></BODY></HTML>
+
+
+

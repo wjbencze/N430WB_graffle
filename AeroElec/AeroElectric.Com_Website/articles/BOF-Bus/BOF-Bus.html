@@ -1,0 +1,136 @@
+<HTML><HEAD>
+<TITLE>AeroElectric Connection - Published Works by Bob Nuckolls</TITLE>
+</HEAD><BODY BGCOLOR="#70e0e0">
+<CENTER><H1>The BOF-Bus . . .<br> Accommodating accessories not designed for the real world of aircraft.</H1></center>
+
+<font size=4>
+
+<b><i>Comments/Questions: I am building a Jabiru J430 and plan to include your
+crowbar over-voltage system and low voltage detector. I am planning on a
+dual battery where the second battery supports the main bus but not the
+starter motor. The plan is to put a power diode between the bus and the
+main battery. This means that that both batteries will charge from the
+regulator but the second battery will not contribute to starting and provide
+a sink to the bus to ensure voltage is maintained to the bus even during
+starting. The idea is for the second battery to keep the electrics going in
+the event of main battery failure. Do you think this make sense?</b></i><p>
+
+There are two separate issues here: First, If you have electronics that are
+NOT designed to live in the real world of KNOWN brownouts that exist in aircraft,
+then having a special battery to support those items during cranking may be
+necessary. This assumes it's unacceptable to delay turning these devices on
+until after the engine is started. Further, we'll address the question of
+"battery failures". The goal of this deliberation is to see how much weight and cost
+of ownership we can carve out of the system you've proposed . . .<p>
+
+Dual batteries add weight, complexity and cost of ownership. If your selection
+of accessories makes a second battery an operational necessity, then you also
+need to craft brown-out free bus (BOF-Bus). A battery sized to support only
+devices connected to a BOF-Bus can be small . . . say a 2AH device weighing a
+couple of pounds. It would also be pretty neat if we make the presence of a BOF-Bus
+transparent to normal operations of the airplane.<p>
+
+See drawing at the end of this article that describes the minimum weight, minimum
+cost implementation of a BOF-Bus. I show a BOF-Bus combined with the E-Bus.
+Any of devices not necessary during battery-only, endurance-assured flight would
+want to have their own ON/OFF switches. This would permit shedding these loads
+during PLAN-B operations which I'll describe later.  The wiring is just like any
+other Z-figure for E-Bus except for items added in red to make it a BOF-Bus too.
+There's a two-pole relay in the starter push-button circuit that ties the BOF
+battery to the BOF-Bus milliseconds before the starter is engaged through the same
+relay. This insures that the E/BOF-Bus is supported for tens of milliseconds that
+Main Bus voltage is depressed due to starter motor inrush current.<p>
+
+A second relay charges the BOF Battery via connection from the Main Battery
+Bus but only after the main battery rises above 13.0 volts. The elevated voltage
+indicates that an alternator is now operational, ready to run ship's electro-whizzies
+and charge both batteries. The exclusive purpose of this itty-bitty battery
+is to mitigate the brown-out problems with the lightest practical device capable
+of supporting BOF-Bus loads for mere seconds. Therefore, provisions for loading
+this battery in flight are not provided.<p>
+
+The BOF system could be installed with a weight penalty of less than 3 pounds. However,
+adding a second battery to your airplane JUST to guard against failure of the Main
+Battery has high $weight$ and $ownership$ numbers. A second battery large enough
+to stand in for a "failed" main battery needs to be the same size . . . 15 pounds
+or more? Let us consider the idea of "battery failure".<p> 
+
+Unless you're planning NOT to maintain your battery, then gross battery failure is
+exceedingly remote. A battery can and should be the most reliable source of power
+in the airplane. It DOES demand a rational preventative maintenance program to
+gage the battery's present CAPACITY against your ENDURANCE requirements. Batteries DO demand consideration for how they're installed. Don't bolt STIFF
+wires to lead posts, don't expose to radiation from exhaust stacks, take reasonable
+precautions against out-of-tolerance voltages for charging, etc.<p>
+
+Since you've expressed a concern for keeping certain electro-whizzies operating
+under battery-only operations, one must first consider (1) WHICH devices are the
+most useful for the purpose of getting destination airport in sight, how much (2)
+CURRENT these devices and (3) for HOW LONG? After you've deduced these answers, what
+is your PLAN-B for making sure that the battery in your airplane is up to the
+task? <p>
+
+If you choose not to craft a preventative maintenance program to assure compliance
+with your PLAN-B design goals, then it matters not how many batteries you install
+or how you wire them. The fact that you can get the engine started is the least
+important feature of your battery system that needs monitoring. It's my considered
+recommendation that your design goals far exceed the FAA's favorite 30 minute
+endurance rule for battery only operations. In my mind, having a light come on
+telling you that the panel will go dark in 30 minutes IS an emergency.<p>
+
+<table width=100%><tr><td>
+<font size=4>There are two qualifying tests of a battery. LOAD TESTING proves the battery's
+ability to carry high loads such as starting the engine. This is the test a service
+station operator puts on your car battery using a device similar to this one. 
+Passing this test simply says the battery will deliver sufficient POWER and cranking
+currents (200A or more) through a sufficiently LOW INTERNAL RESISTANCE to start
+the engine . . . a relatively low-energy event that needs perhaps 5% of the battery's
+capacity. </font></td><td><Img width=400 src=HF91129_4.jpg></td></tr></table>
+<p>
+<table width=100%><tr><td><image width=400 src=9044-100-1.jpg></td><td>
+<font size=4>CAPACITY testing measures the battery's total energy delivered under
+protocols defined by (1), (2) and (3)above.  The 'Connection will offer a means
+for minimum $time$, in-situ battery capacity testing as a 3-ounce accessory to be
+installed in an aircraft. The Product Function Specification has been submitted to
+my software guru. He's going to teach an 80-cent processor how to do this job while
+you're home mowing the lawn, hangar flying over a suds or attending some other
+task more worthwhile than praying over your ship's year-old battery.</font></td></tr></table>
+<p>
+
+My personal design philosophy strives to never experience an electrically induced
+emergency. PLAN-B and in some cases PLAN-C will be in place to deal with an
+alternator-out situation in an orderly, no-sweat manner. This requires crafting
+maintenance and operating protocols for ownership that meet my design goals
+throughout the lifetime of the airplane. The protocols call out -either- 
+PERIODIC REPLACEMENT of what appears to be a perfectly good battery because it's
+still cranking the engine -or- CAPACITY TESTING against your personalized design
+goals defined by (1), (2) and (3) above. You didn't mention whether or not you
+plan to have a vacuum system. If you're going all-electric, then Figure Z-13/8
+in the 'Connection would offer yet another layer of system reliability and
+expanded endurance with a minimum of added weight and cost of ownership.<p>
+
+If you subscribe to the "no electrical emergencies" design goal, you need decide
+which protocol offers the lowest cost of ownership:(A) throw a new $50 battery in
+every annual or (B) acquire the $tools$ and spend the $time$ to track your
+battery's condition or (C) adding the second, engine driven power source (like
+that shown in Z-13/8) that lets you run a battery until it simply won't crank the
+engine any more.<p>
+
+99.9% of battery failures are NOT because the battery went "bad". Most unplanned
+replacements occur because a battery was either by poor attention to
+operating conditions and/or left in service long past its ability to perform to
+design goals. The path to airborne bliss is NOT stacking in more batteries with
+the HOPE that at least one of them will get you home. Battery Nirvana comes from
+CONFIDENCE in your battery's ability to do the job you've assigned it with a minimum
+weight, system complexity and cost of ownership. The solution for both confident
+battery only operations AND crafting a brown-out free bus doesn't need to be
+heavy, complex or expensive.<p>
+
+Fly comfortably.<p>
+
+'lectric Bob . . .
+<HR>
+</BODY></HTML>
+
+
+
+ 

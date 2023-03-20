@@ -1,0 +1,189 @@
+<HTML><HEAD>
+<TITLE>AeroElectric Connection - Breakers not Recommended for Aircraft</TITLE>
+</HEAD><BODY text="000000" background="graph.gif">
+<P>
+
+<table border="0" width=80%><tr><td>
+<IMG WIDTH=400 ALIGN=center HSPACE=8 SRC="logo.jpg">
+</td>
+<td></table>
+<CENTER><H1>Bob's Shop Notes:<br>
+Breakers not recommended for aircraft . . .<br></H1></Center>
+
+<hr>
+<P>
+<font size=4>Over the past several months leading up to the crafting of these notes
+there have been discussions about the suitability of certain circuit breakers
+used in conjunction with the crowbar over voltage protection system.
+This writer expended a lot of time and energy responding
+to cabbages and tomatoes tossed in from multiple directions only to discover that
+having put one issue to rest, more cabbages and tomatoes were launched. During the
+course of the conversations, not one part number (or breaker fabrication philosophy)
+was proffered to support the allegations of the garbage chuckers . . . <p>
+
+Due to the diligence, curiosity and willingness to share by an AeroElectric-List
+reader (Thank you Mr. Baker!) we now have hard data upon which useful
+critical review can take place for at least one brand and style of breaker:<p>
+</font>
+<hr>
+<table border="0" width = 100% ><tr>
+<td>
+<font size=4>Before we visit Mr. Baker's discovery on a breaker that failed in his
+airplane, let's look at two breaker configurations with a long and
+successful history in aircraft. The first is one of many Klixon miniature devices
+cut open in this view.<p>
+
+A feature of being an engineer is the opportunity to acquire an appreciation
+for what I've often called "the elegant solution". When I first peered into this
+cutaway and began fiddling with the mechanism, I was struck by the cleverness of
+the designer(s).<p>
+
+This breaker features double break contacts . . . a really good deal in higher
+voltage systems because this architecture effectively doubles the contact spreading
+velocity and enhances the breaker's ability to clear a fault. However, this is not even
+beginning to be a concern for a 14v system.<p>
+
+Next we see that the bi-metal temperature sensitive element, the heater
+that provides a temperature rise on current flow and the frame that supports
+and connects the two movable contacts are combined in one and the same piece of
+material. This is strikingly elegant from the perspective of reduced parts count
+but more importantly for the intimate physical relationship between the bi-metal
+device tasked with tripping the breaker open. You can see this construction
+more closely by <a href="Klixon_2a.jpg">Clicking Here.</a>
+</font>
+
+</td><td>
+<IMG WIDTH=400 ALIGN=center HSPACE=8 SRC="Klixon_1a.jpg">
+</td></tr></table>
+<hr>
+<table border="0" width = 100% ><tr><td>
+<IMG WIDTH=400 ALIGN=center HSPACE=8 SRC="81a.jpg">
+</td>
+<td>
+<font size=4><a href ="81a.jpg">Click here for larger image</a> Here's a cutaway on
+a popular product from Potter-Brumfield. It's a switch-breaker combination that's been
+used on Bonanzas and Barons for a very long time and is still used to this day.<p>
+
+Note here too that the current sensing heater and the trip controlling bi-metal
+strut are one and the same device. In this photo and the one above, the pathway
+for current flow through the closed device is traced in orange.
+<a href ="83a.jpg">Click here</a> for view of this product with the switch contacts
+closed.
+</font>
+
+</td></tr></table>
+
+<hr>
+
+<table border="0" width = 100% ><tr>
+<td>
+<font size=4><a href = "ETA-45-700-P_5A.jpg">Click here for larger image</a> Here's
+Mr. Baker's failed breaker. I've pointed to a damaged segment in a ribbon heater
+that is wrapped around the bi-metal trip strut. To prevent shorts to
+bi-metal strut, electrical isolation is provided by a layer of INSULATION clearly
+visible under the heater and over the strut.<p>
+
+Effects of this insulation are intuitively obvious. Given both electrical and
+THERMAL isolation between the heater and the bi-metal strut, some magnitude
+of current through the breaker will produce a rate-of-rise in heater temperature
+that's too steep with respect to heat rejected into the bi-metal strut. The
+predictable consequence is illustrated and demonstrated in the form of a fuse heater.<p>
+
+Contrast this feature with the two breakers cited above. The integral heater/bi-metal
+construction offers no such thermal barrier and contributes to an ability of the
+breaker to respond very quickly to extraordinary faults without suffering a
+life-limiting event (which is a requirement of Mil-C-5809 cited below).
+</font>
+</td><td>
+<IMG WIDTH=400 ALIGN=center HSPACE=8 SRC="ETA-45-700-P_5A.jpg">
+</td></tr></table>
+<hr>
+<Font size=4>
+Reasonable deductions we may draw from the foregoing discoveries:
+<ul>
+<li>Are the Klixon and Potter-Brumfield breakers cited in this study the only
+breakers recommended for system designs by AeroElectric Connection (or anyone else
+for that matter)?
+<p>
+<ul>
+<li>NO . . . ANY breaker having an integral heater/bimetal element will probably
+provide the superior performance compatible with AeroElectric Connection design goals.
+Certainly any breaker designed to meet qualification requirements of Mil-C-5809
+will be just fine but there are probably lots of commercial products will work
+fine too.
+</ul>
+<p>
+<li>Are there safety-of-flight issues associated with use of relatively flimsy
+breakers like the ETA45 series devices?
+<p>
+<ul>
+<li>NO . . . If you architecture your electrical system so that it provides minimal
+functionality for any intended mission with inaccessible fuses, then it's no big deal to have a
+breaker fail open fuse-like as the cited ETA45. The trade-offs illuminate whether
+your breaker purchasing decision (with an EXPECTATION of being able to reset any time for any reason) is
+a good return on investment. It's immaterial whether the breaker fails upstream of
+a crowbar event or any other hard fault. It's simply a matter of making a choice
+between installing (1) a very inexpensive fuse, (2) an inexpensive breaker that
+occasionally masquerades as a fuse or (3) a premium breaker that is a proven performer
+within your design goals.
+</ul>
+<p>
+<li>Are there issues with published specifications for the ETA breakers?
+<ul>
+<p>
+<li>NO . . . ETA breakers probably work as advertised. This study emphasizes
+the value of UNDERSTANDING a part's ratings and capabilities not only from the
+perspective of getting what you paid for but to deduce the part's behavior at
+the extremes of its ratings or in unusual applications. As suggested but never
+defined by others, it's possible that details in the physics of a part's operation
+warrant selection of another part based on understanding the physics while still
+meeting your design goals. "Yes Matilda, there ARE breakers out there that I would
+not recommend for use upstream of a crowbar OV module."
+<p>
+</ul>
+<li>Should I be concerned if breakers already installed in my airplane are of
+unknown pedigree with respect to features cited above?
+<ul>
+<p>
+<li>NOT AT ALL . . . I presume that your system architecture and pilot's
+plan-A/Plan-B decisions are designed to craft a failure-tolerant fight-system.
+If so, should a rare event that opens one of your breakers be
+COMBINED with another even less likely event that fuses a heater, what's the big
+deal? What's your PRE-PLANNED outcome for this possibility?<p>
+
+You're more likely to experience an OPEN wire than a hard-faulted wire downstream
+of any breaker. In either case, the system powered by that breaker has become unavailable
+to you. I wouldn't loose any sleep over breaker selection but based on experience
+you may consider alternative breakers at some time in the future . . . 
+</ul>
+<p>
+Remember:
+<p>
+<li>Nuckolls' first law of airplane systems design sez: "Things
+break"
+<p>
+<li>The Second: "Systems shall be designed so that when things
+break, no immediate hazard is created."
+<p>
+<li>The third: "Things needed for comfortable termination of
+flight require backup or special consideration to insure
+operation and availability"
+<p>
+<li>The forth: "Upgrading the quality, reliability, longevity, or
+capability of a part shall be because you're tired of replacing
+it or want some new feature, not because it damned near got
+you killed."
+<p>
+If these tenents are observed (not difficult to do) then it makes no
+difference where you buy your parts, how much money you spend on them or which
+parts you select. You're free to try any selection with the goal of exploring how
+long it will last or how well it will perform.
+<P>
+FOLLOW UP DATA: There's no reason this page needs to be set in stone. If any reader
+has an breaker brand/style that he/she would like to add to the breakers cited
+above, I'd be pleased to receive samples and add them to the study.
+<p>
+</font>
+<HR>
+9 OCT 2005
+</BODY></HTML>
